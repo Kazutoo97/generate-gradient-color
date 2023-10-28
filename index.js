@@ -25,15 +25,16 @@ copyBtn.addEventListener("click", () => {
   outputCode.select();
   document.execCommand("copy");
   copyBtn.classList.add("active");
+
   setTimeout(() => {
     copyBtn.classList.remove("active");
-    outputCode.blur()
+    outputCode.blur();
   }, 3000);
 });
 
 generateBtn.addEventListener("click", onClickGenerate);
+
 window.onload = () => {
   container.style.background = "linear-gradient(255deg, #8d2a5a, #e79e86)";
-
   outputCode.value = "background: linear-gradient(255deg, #8d2a5a, #e79e86);";
 };
