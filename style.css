@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 600px;
+  height: 115px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px rgba(60, 60, 100, 0.15);
+}
+
+.wrapper .top {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0 0;
+  padding: 5px 15px;
+}
+.wrapper .top p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #424565;
+}
+
+.top .copy-btn {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.top .copy-btn::before {
+  content: "COPIED!";
+  position: absolute;
+  top: -46px;
+  left: -18px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: #fb2576;
+  font-size: 10px;
+  cursor: auto;
+  display: none;
+}
+
+.top .copy-btn::after {
+  content: "";
+  position: absolute;
+  top: -26px;
+  left: 8px;
+  height: 10px;
+  width: 10px;
+  transform: rotate(45deg);
+  background-color: #fb2576;
+  cursor: auto;
+  display: none;
+}
+
+.top .copy-btn i {
+  font-size: 20px;
+  line-height: none;
+  color: rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+}
+.top .copy-btn:hover i {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.top .copy-btn.active::before,
+.top .copy-btn.active::after {
+  display: block;
+}
+
+.bot {
+  height: 100%;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  padding: 15px;
+}
+.bot input {
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  color: #424565;
+  padding: 0 15px;
+}
+
+.bot .generate {
+  border: none;
+  outline: none;
+  background: #fb2576;
+  padding: 0 20px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.bot .generate:hover {
+  background: #ec165c;
+}
